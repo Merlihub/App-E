@@ -77,7 +77,7 @@ function repeatChord() {
 
 function playChord(selectedNotes) {
   selectedNotes.forEach((note) => {
-    const path = `audio/notes/${note}.mp3`;
+    const path = `audio/${note}.mp3`;
     console.log("Playing:", path);
     const audio = new Audio(path);
     audio.play().catch((err) => console.error("Audio play error:", err));
