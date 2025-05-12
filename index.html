@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chord E Note Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#4CAF50" />
+  </head>
+  <body>
+    <h1>Find the E Note</h1>
+
+    <button onclick="playENote()">Play E Note</button>
+    <button onclick="playRandomChord()">Play Random Chord</button>
+    <button onclick="repeatChord()" id="repeatButton" style="display: none">
+      Repeat Chord
+    </button>
+
+    <div id="guess-buttons" style="display: none">
+      <button onclick="checkAnswer(true)">Contains E</button>
+      <button onclick="checkAnswer(false)">Does NOT Contain E</button>
+    </div>
+    <button
+      id="showNotesButton"
+      style="display: none"
+      onclick="showPlayedNotes()"
+    >
+      Show Notes
+    </button>
+    <p id="answer-notes"></p>
+    <div id="message"></div>
+
+    <audio id="eNote" src="audio/e_note.mp3"></audio>
+
+    <script src="script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js")
+          .then((registration) => console.log("Service Worker Registered"))
+          .catch((err) =>
+            console.error("Service Worker registration failed:", err)
+          );
+      }
+    </script>
+  </body>
+</html>

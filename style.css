@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 6vw;
+    margin-bottom: 5vh;
+    color: white;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 4vw;
+    border: none;
+    border-radius: 10px;
+    background: #4CAF50;
+    color: white;
+}
+
+button:active {
+    background: #45a049;
+}
+
+#guess-buttons button {
+    background: #2196F3;
+}
+
+#guess-buttons button:active {
+    background: #1976D2;
+}
+
+#repeatButton {
+    background: #FF9800;
+}
+
+#repeatButton:active {
+    background: #FB8C00;
+}
+
+#message {
+    margin-top: 5vh;
+    font-size: 6vw;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+#chord-notes {
+    font-size: 5vw;
+    margin-top: 3vh;
+    color: #333;
+}
